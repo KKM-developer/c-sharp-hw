@@ -67,7 +67,7 @@ else
 8 -> 2, 4, 6, 8
 */
 Console.WriteLine("Задача 4");
-Console.Write("Введите введите конечное число ряда: ");
+Console.Write("Введите конечное число ряда: ");
 int nNumb = Convert.ToInt32(Console.ReadLine());
 int count = 1;
 while (count <= nNumb)
