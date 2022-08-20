@@ -49,7 +49,17 @@ Console.WriteLine("Максимальное число = "+max);
 -3 -> нет
 7 -> нет
 */
-
+Console.WriteLine("Задача 3");
+Console.Write("Введите число на проверку четности: ");
+int evenNumb = Convert.ToInt32(Console.ReadLine());
+if (evenNumb%2==0) 
+{
+    Console.WriteLine("Число "+evenNumb+" четное");
+}
+else
+{
+    Console.WriteLine("Число "+evenNumb+" НЕ четное");
+}
 /*
 Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
 
