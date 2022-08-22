@@ -23,7 +23,28 @@ Console.WriteLine($"Вторая цифра вашего числа: {returnSeco
 
 32679 -> 6
 */
+void thirdNumber(int number)
+{
+    int lenght = Convert.ToInt32(Math.Log10(number));
+    if (lenght>2)
+    {
+        int pow = Convert.ToInt32(Math.Pow(10, lenght));
+        int powDel = pow/100;
+        int numb = number / powDel;
+        int answer = numb % 10;
+        Console.WriteLine($"Третья цифра вашего числа: {answer}");
+    }
+    else
+    {
+        Console.WriteLine($"Нет третьей цифры в вашем числе: {number}");
+    }
 
+
+}
+Console.WriteLine("Задача 2");
+Console.Write("Введите число: ");
+someNumb = Convert.ToInt32(Console.ReadLine());
+thirdNumber(someNumb);
 /*
 Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
