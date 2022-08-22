@@ -38,8 +38,6 @@ void thirdNumber(int number)
     {
         Console.WriteLine($"Нет третьей цифры в вашем числе: {number}");
     }
-
-
 }
 Console.WriteLine("Задача 2");
 Console.Write("Введите число: ");
@@ -52,3 +50,22 @@ thirdNumber(someNumb);
 7 -> да
 1 -> нет
 */
+void numbToWeekend(int numb)
+{
+     if (numb < 6 & numb > 0)
+     {
+        Console.WriteLine("Рабочий день");
+     }
+     else if (numb < 8 & numb > 6)
+     {
+        Console.WriteLine("Выходной день");
+     }
+     else
+     {
+        Console.WriteLine("В неделе только 7 дней");
+     }
+}
+Console.WriteLine("Задача 3");
+Console.Write("Введите числом день недели: ");
+someNumb = Convert.ToInt32(Console.ReadLine());
+numbToWeekend(someNumb);
