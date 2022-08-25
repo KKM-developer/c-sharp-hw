@@ -59,6 +59,31 @@ catch
 3 -> 1, 8, 27
 5 -> 1, 8, 27, 64, 125
 */
+string returnPOW()
+{
+    Console.Write("Введите число, для составления таблици кубов ");
+    int powNumb = Convert.ToInt32(Console.ReadLine());
+    int start = 1;
+    List<int> answer = new List<int> {};
+    while (start <= powNumb)
+    {
+        int numb = Convert.ToInt32(Math.Pow(start, 3));
+        start += 1;
+        answer.Add(numb);
+    }
+    string answer1 = string.Join(", ", answer.ToArray());
+    return answer1;
+
+}
+try
+{
+    Console.WriteLine("Задача 3");
+    Console.WriteLine(returnPOW());
+}
+catch
+{
+    Console.WriteLine("Необходимо вводить целыми числами");  
+}
 
 /*
 задача необязательная
@@ -78,3 +103,31 @@ catch
 На выходе:
 340
 */
+int sumCube()
+{
+    int sum = 0;
+    int cube = 0;
+    int numb = 0;
+    Console.WriteLine("Вводите целые числа (прогамма не остановится пока сумма выших чисел не будет равна 0): ");
+    numb = Convert.ToInt32(Console.ReadLine());
+    sum += numb;
+    cube += Convert.ToInt32(Math.Pow(numb, 2));
+    Console.WriteLine($"Текущая сумма Ваших чисел равна {sum}");
+    while (sum != 0)
+    {
+        numb = Convert.ToInt32(Console.ReadLine());
+        sum += numb;
+        cube += Convert.ToInt32(Math.Pow(numb, 2));
+        Console.WriteLine($"Текущая сумма Ваших чисел равна {sum}");
+    }
+    return cube;
+}
+try
+{
+    Console.WriteLine("Задача 4");
+    Console.WriteLine("Сумма квадратов Ваших чисел равна " + sumCube());
+}
+catch
+{
+    Console.WriteLine("Необходимо вводить целыми числами");  
+}
