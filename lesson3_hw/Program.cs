@@ -42,7 +42,7 @@ string getDistance()
     Console.Write("Введите Z координату второй точки ");
     int secondZ = Convert.ToInt32(Console.ReadLine());
     double distance = Math.Round(Math.Sqrt(Math.Pow(firstX-secondX, 2)+Math.Pow(firstY-secondY, 2)+Math.Pow(firstZ-secondZ, 2)), 2);
-    return $"расстояние между двумя точками в 2D пространстве {distance}";
+    return $"расстояние между двумя точками в 3D пространстве {distance}";
 }
 try
 {
